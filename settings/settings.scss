@@ -1,0 +1,37 @@
+$light-bg: #ffffff;
+$light-text: #1a1a1a;
+
+$dark-bg: #1a1a1a;
+$dark-text: #f1f1f1;
+
+:root {
+  --bg-color: #{$light-bg};
+  --bg-text-color: #{$light-text};
+}
+
+body.light {
+  --bg-color: #{$light-bg};
+  --bg-text-color: #{$light-text};
+}
+
+body.dark {
+  --bg-color: #{$dark-bg};
+  --text-color: #{$dark-text};
+}
+
+body.auto {
+  @media (prefers-color-scheme: dark) {
+    --bg-color: #{$dark-bg};
+    --text-color: #{$dark-text};
+  }
+  @media (prefers-color-scheme: light) {
+    --bg-color: #{$light-bg};
+    --text-color: #{$light-text};
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: 0.3s ease;
+}
