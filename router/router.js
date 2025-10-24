@@ -57,24 +57,26 @@ const urlRoute = (event) => {
 };
 
 const urlLocationHandler = async () => {
+  console.log("Çağrıldım");
+
   let location = window.location.pathname;
-  if (location.length == 0) {
+
+  if (location.length === 0) {
     location = "/";
   }
-  const route = urlRoutes[location] || urlRoutes[404];
 
-  try {
+  if (!urlRoutes[location]) {
+    console.warn("Sayfa bulunamadı, 404'e yönlendiriliyor...");
+    window.history.pushState({}, "", 404);
+    const fallback = await fetch(urlRoutes[404].template).then((r) => r.text());
+    document.getElementById("main-page").innerHTML = fallback;
+    loadPageScript("/404");
+  } else {
+    const route = urlRoutes[location];
     const response = await fetch(route.template);
-    if (!response.ok) throw new Error("Template bulunamadı");
     const html = await response.text();
     document.getElementById("main-page").innerHTML = html;
     loadPageScript(location);
-  } catch (err) {
-    console.log("hataya düştü");
-
-    console.error("Router fetch error:", err);
-    const fallback = await fetch(urlRoutes[404].template).then((r) => r.text());
-    document.getElementById("main-page").innerHTML = fallback;
   }
 
   const links = document.querySelectorAll("nav a");
@@ -90,7 +92,7 @@ const urlLocationHandler = async () => {
 window.onpopstate = urlLocationHandler;
 window.route = urlRoute;
 
-urlLocationHandler();
+/* urlLocationHandler(); */
 
 const loadPageScript = (path) => {
   const oldScript = document.getElementById("page-script");
@@ -111,5 +113,5 @@ const loadPageScript = (path) => {
 };
 
 window.addEventListener("DOMContentLoaded", async () => {
-  await urlLocationHandler(); // ilk sayfayı yükle
+  await urlLocationHandler();
 });

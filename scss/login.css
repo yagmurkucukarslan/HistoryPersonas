@@ -89,4 +89,25 @@ button[type=button] {
 button[type=button]:hover {
   background-color: #fff;
   color: #000;
+}
+
+.profile-upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.profile-upload #avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid #4a90e2;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.profile-upload #avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
 }/*# sourceMappingURL=login.css.map */
