@@ -16,7 +16,6 @@ async function loadLanguage(lang) {
 
 function setLang(button) {
   const lang = button.id;
-  /* localStorage.setItem("lang", lang); */
   setCookie("lang", lang, 14);
   loadLanguage(lang);
 }

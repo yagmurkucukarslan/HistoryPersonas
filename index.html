@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/router/navbar.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="header-start">
+        <h2>Echoes of History</h2>
+      </div>
+      <div class="header-mid">
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/explore">Explore</a>
+          </li>
+          <li>
+            <a href="/myechoes">My Echoes</a>
+          </li>
+          <li>
+            <a href="/community">Community</a>
+          </li>
+        </ul>
+      </div>
+      <div class="header-end">
+        <button onclick="route(event)" data-href="/logIn">Giriş Yap</button>
+
+        <button>⚙️</button>
+        <button onclick="route(event)" data-href="/profile">👤</button>
+      </div>
+    </nav>
+    <div id="main-page" class="main-page"></div>
+    <script src="/js/deneme.js"></script>
+
+    <script src="router/router.js"></script>
+  </body>
+</html>

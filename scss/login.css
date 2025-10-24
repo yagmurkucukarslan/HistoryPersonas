@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+.container {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  left: 50%;
+  top: 50%;
+}
+
+h1 {
+  margin-bottom: 25px;
+  color: #ffd700;
+  font-size: 2rem;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.button-group button {
+  background: transparent;
+  border: 2px solid #ffd700;
+  color: #ffd700;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+.button-group button.active,
+.button-group button:hover {
+  background-color: #ffd700;
+  color: #1f1c2c;
+}
+
+.form {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form.active {
+  display: flex;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+input::-moz-placeholder {
+  color: #ddd;
+}
+
+input::placeholder {
+  color: #ddd;
+}
+
+button[type=button] {
+  background-color: #ffd700;
+  color: #1f1c2c;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type=button]:hover {
+  background-color: #fff;
+  color: #000;
+}/*# sourceMappingURL=login.css.map */

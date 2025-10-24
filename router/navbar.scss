@@ -1,0 +1,41 @@
+$bg-color: #231e0f;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: $bg-color;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #a3a19b65;
+  h2 {
+    margin-left: 10px;
+    color: #dadadb;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+    li {
+      a {
+        text-decoration: none;
+        color: #a3a19b;
+        font-size: 18px;
+      }
+    }
+  }
+  .header-end {
+    margin-right: 10px;
+  }
+  a.active {
+    color: #00bcd4; 
+    border-bottom: 2px solid #00bcd4;
+  }
+}

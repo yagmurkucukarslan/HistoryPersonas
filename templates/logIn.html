@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/scss/login.css" />
+<div class="container">
+  <h1>Giriş Yap</h1>
+
+  <div class="button-group">
+    <button id="registerTab">Kayıt Ol</button>
+    <button id="loginTab" class="active">Giriş Yap</button>
+  </div>
+  <div id="loginForm" class="form active">
+    <input type="text" id="userNameLogIn" placeholder="Kullanıcı Adı" />
+    <input type="password" id="passwordLogIn" placeholder="Şifre Giriniz" />
+    <button type="button" onclick="logIn()">Giriş Yap</button>
+  </div>
+  <div id="registerForm" class="form">
+    <input type="text" id="userName" placeholder="İsim" />
+    <input type="text" id="surName" placeholder="Soyisim" />
+    <input type="text" id="email" placeholder="Email Giriniz" />
+    <input type="password" id="password" placeholder="Şifre Giriniz" />
+    <button type="button" onclick="registerUser()">Kayıt Ol</button>
+  </div>
+</div>
