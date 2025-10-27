@@ -44,6 +44,11 @@ const urlRoutes = {
     title: "My Profile",
     description: "",
   },
+  "/settings": {
+    template: "templates/settings.html",
+    title: "",
+    description: "",
+  },
 };
 
 const urlRoute = (event) => {
@@ -57,8 +62,6 @@ const urlRoute = (event) => {
 };
 
 const urlLocationHandler = async () => {
-  console.log("Çağrıldım");
-
   let location = window.location.pathname;
 
   if (location.length === 0) {
