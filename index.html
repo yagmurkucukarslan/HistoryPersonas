@@ -3,39 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title data-key="nav_title">Echoes of History</title>
     <link rel="stylesheet" href="/router/navbar.css" />
+    <link rel="stylesheet" href="scss/settings.css" />
   </head>
   <body>
     <nav>
       <div class="header-start">
-        <h2>Echoes of History</h2>
+        <h2 data-key="site_name">Echoes of History</h2>
       </div>
       <div class="header-mid">
         <ul>
           <li>
-            <a href="/">Home</a>
+            <a href="/" data-key="nav_home">Home</a>
           </li>
           <li>
-            <a href="/explore">Explore</a>
+            <a href="/explore" data-key="nav_explore">Explore</a>
           </li>
           <li>
-            <a href="/myechoes">My Echoes</a>
+            <a href="/myechoes" data-key="nav_myechoes">My Echoes</a>
           </li>
           <li>
-            <a href="/community">Community</a>
+            <a href="/community" data-key="nav_community">Community</a>
           </li>
         </ul>
       </div>
       <div class="header-end">
-        <button onclick="route(event)" data-href="/logIn">Giriş Yap</button>
-
-        <button onclick="route(event)" data-href="/settings">⚙️</button>
-        <button onclick="route(event)" data-href="/profile">👤</button>
+        <button onclick="route(event)" data-href="/logIn" data-key="btn_login">
+          Log In
+        </button>
+        <button
+          onclick="route(event)"
+          data-href="/settings"
+          data-key="btn_settings"
+        >
+          Settings
+        </button>
+        <button
+          onclick="route(event)"
+          data-href="/profile"
+          data-key="btn_profile"
+        >
+          Profile
+        </button>
       </div>
     </nav>
+
     <div id="main-page" class="main-page"></div>
 
     <script src="router/router.js"></script>
+    <script src="js/global.js"></script>
   </body>
 </html>

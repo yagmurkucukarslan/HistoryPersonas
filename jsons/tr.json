@@ -1,4 +1,13 @@
 {
+  "nav_title": "Echoes of History",
+  "site_name": "Echoes of History",
+  "nav_home": "Anasayfa",
+  "nav_explore": "Keşfet",
+  "nav_myechoes": "Benim Echo’larım",
+  "nav_community": "Topluluk",
+  "btn_login": "Giriş Yap",
+  "btn_settings": "Ayarlar",
+  "btn_profile": "Profil",
   "page_title": "Ayarlar",
   "settings_title": "Ayarlar",
   "appearance_title": "Görünüm",
@@ -7,5 +16,8 @@
   "auto_mode": "Otomatik",
   "language_title": "Dil Seçeneği",
   "turkish_btn": "Türkçe",
-  "english_btn": "İngilizce"
+  "english_btn": "İngilizce",
+  "lang_text": "Dil",
+  "theme_text" : "Tema"
+
 }

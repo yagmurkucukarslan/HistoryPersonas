@@ -7,21 +7,25 @@
 
     <button id="registerTab">Kayıt Ol</button>
   </div>
+
+  <!-- GİRİŞ YAPMA -->
+
   <div id="loginForm" class="form active">
-    <input type="text" id="userNameLogIn" placeholder="Kullanıcı Adı" />
-    <input type="password" id="passwordLogIn" placeholder="Şifre Giriniz" />
-    <button type="button" onclick="logIn()">Giriş Yap</button>
+    <input type="text" id="loginEmail" placeholder="Kullanıcı Email" />
+    <input type="password" id="loginPassword" placeholder="Şifre Giriniz" />
+    <button type="button">Giriş Yap</button>
   </div>
+
+  <!-- KAYIT OLMA -->
   <div id="registerForm" class="form">
     <div class="profile-upload">
       <img id="avatar" src="images/addprofile (1).png" alt="Avatar" />
       <input type="file" id="fileInput" accept="image/*" hidden />
     </div>
-
     <input type="text" id="userName" placeholder="İsim" />
     <input type="text" id="surName" placeholder="Soyisim" />
     <input type="text" id="email" placeholder="Email" />
     <input type="password" id="password" placeholder="Şifre Giriniz" />
-    <button type="button" onclick="registerUser()">Kayıt Ol</button>
+    <button type="button">Kayıt Ol</button>
   </div>
 </div>

@@ -1,0 +1,190 @@
+// 🎯 Değişkenler
+$font-family: "Inter", sans-serif;
+$bg-color: #231e0f;
+$text-color: #fff;
+$secondary-bg: #2a241b;
+$border-color: #3b3226;
+$text-muted: #ccc;
+$accent: #ffcc00;
+$bg-dark: #1a150e;
+
+body {
+  font-family: $font-family;
+  background-color: $bg-color;
+  color: $text-color;
+  margin: 0;
+  text-align: center;
+}
+
+.hero {
+  margin-top: 100px;
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+  }
+
+  p {
+    color: #ccc;
+    margin-bottom: 30px;
+  }
+
+  .search-bar {
+    display: inline-flex;
+    background-color: $secondary-bg;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+
+    input {
+      background: none;
+      border: none;
+      outline: none;
+      color: $text-color;
+      width: 500px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: $accent;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0 40px;
+
+  .card {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    color: $text-color;
+
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid $border-color;
+      transition: transform 0.3s, border-color 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+        border-color: $accent;
+      }
+    }
+
+    h3 {
+      margin: 10px 0 5px;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  }
+}
+
+.modal {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  &.show {
+    display: flex;
+    opacity: 1;
+    pointer-events: all;
+  }
+  .modal-content {
+    background-color: $secondary-bg;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    .modal.show & {
+      transform: translateY(0);
+    }
+
+    .modal-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .modal-description {
+      color: $text-muted;
+      font-size: 0.9rem;
+      margin-bottom: 25px;
+    }
+
+    .profile-info {
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        margin-bottom: 12px;
+        .label {
+          color: $text-muted;
+          font-size: 0.9rem;
+        }
+        .value {
+          color: $text-color;
+          font-size: 0.95rem;
+          text-align: right;
+          &.italic {
+            font-style: italic;
+            color: lighten($text-muted, 20%);
+          }
+        }
+      }
+    }
+    .modal-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: $accent;
+    }
+
+    .start-btn {
+      background-color: $accent;
+      color: $bg-dark;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+      margin-top: 10px;
+      &:hover {
+        background-color: darken($accent, 10%);
+      }
+    }
+  }
+}

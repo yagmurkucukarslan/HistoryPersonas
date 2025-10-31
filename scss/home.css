@@ -1,0 +1,164 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #231e0f;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
+
+.hero {
+  margin-top: 100px;
+}
+.hero h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+.hero p {
+  color: #ccc;
+  margin-bottom: 30px;
+}
+.hero .search-bar {
+  display: inline-flex;
+  background-color: #2a241b;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+}
+.hero .search-bar input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 500px;
+  font-size: 1rem;
+}
+.hero .search-bar button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0 40px;
+}
+.cards .card {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+}
+.cards .card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #3b3226;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.cards .card img:hover {
+  transform: scale(1.1);
+  border-color: #ffcc00;
+}
+.cards .card h3 {
+  margin: 10px 0 5px;
+}
+.cards .card p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.modal {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+.modal.show {
+  display: flex;
+  opacity: 1;
+  pointer-events: all;
+}
+.modal .modal-content {
+  background-color: #2a241b;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+.modal.show .modal .modal-content {
+  transform: translateY(0);
+}
+.modal .modal-content .modal-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.modal .modal-content .modal-description {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+.modal .modal-content .profile-info .info-row {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-bottom: 12px;
+}
+.modal .modal-content .profile-info .info-row .label {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+.modal .modal-content .profile-info .info-row .value {
+  color: #fff;
+  font-size: 0.95rem;
+  text-align: right;
+}
+.modal .modal-content .profile-info .info-row .value.italic {
+  font-style: italic;
+  color: white;
+}
+.modal .modal-content .modal-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.modal .modal-content .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ffcc00;
+}
+.modal .modal-content .start-btn {
+  background-color: #ffcc00;
+  color: #1a150e;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+.modal .modal-content .start-btn:hover {
+  background-color: rgb(204, 163.2, 0);
+}/*# sourceMappingURL=home.css.map */

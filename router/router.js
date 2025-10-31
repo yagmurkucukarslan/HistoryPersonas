@@ -49,6 +49,11 @@ const urlRoutes = {
     title: "",
     description: "",
   },
+  "/chat": {
+    template: "templates/chat.html",
+    title: "",
+    description: "",
+  },
 };
 
 const urlRoute = (event) => {
@@ -74,12 +79,14 @@ const urlLocationHandler = async () => {
     const fallback = await fetch(urlRoutes[404].template).then((r) => r.text());
     document.getElementById("main-page").innerHTML = fallback;
     loadPageScript("/404");
+    document.dispatchEvent(new Event("spa:page-changed"));
   } else {
     const route = urlRoutes[location];
     const response = await fetch(route.template);
     const html = await response.text();
     document.getElementById("main-page").innerHTML = html;
     loadPageScript(location);
+    document.dispatchEvent(new Event("spa:page-changed"));
   }
 
   const links = document.querySelectorAll("nav a");
@@ -117,4 +124,11 @@ const loadPageScript = (path) => {
 
 window.addEventListener("DOMContentLoaded", async () => {
   await urlLocationHandler();
+  document.dispatchEvent(new Event("spa:page-changed"));  
 });
+
+window.loadPageScript = loadPageScript;
+window.navigateTo = (path) => {
+  window.history.pushState({}, "", path);
+  urlLocationHandler();
+};

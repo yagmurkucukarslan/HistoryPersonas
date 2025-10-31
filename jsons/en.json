@@ -1,11 +1,22 @@
 {
+  "nav_title": "Echoes of History",
+  "site_name": "Echoes of History",
+  "nav_home": "Home",
+  "nav_explore": "Explore",
+  "nav_myechoes": "My Echoes",
+  "nav_community": "Community",
+  "btn_login": "Log In",
+  "btn_settings": "Settings",
+  "btn_profile": "Profile",
   "page_title": "Settings",
   "settings_title": "Settings",
   "appearance_title": "Appearance",
-  "light_mode": "Light",
-  "dark_mode": "Dark",
+  "light_mode": "Light Mode",
+  "dark_mode": "Dark Mode",
   "auto_mode": "Auto",
   "language_title": "Language",
   "turkish_btn": "Turkish",
-  "english_btn": "English"
+  "english_btn": "English",
+  "lang_text": "Language",
+  "theme_text": "Theme"
 }

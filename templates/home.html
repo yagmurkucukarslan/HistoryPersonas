@@ -1,1 +1,44 @@
-<h1>home page</h1>
+<link rel="stylesheet" href="/scss/home.css" />
+
+<section class="hero">
+  <h1>Konuşmak istediğin tarihi kişilik kim?</h1>
+  <p>
+    Yapay zeka, tarihin en büyük zihinlerini canlandırıyor. Birini seç ve
+    konuşmaya başla.
+  </p>
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search historical figures..."
+      id="searchInput"
+    />
+    <button id="searchBtn">Devam Et</button>
+  </div>
+</section>
+
+<!-- Dinamik olarak doldurulacak kart alanı -->
+<section class="cards" id="cards-container"></section>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <img src="" alt="" class="modal-img" />
+    <span class="close-btn">&times;</span>
+    <h2 id="modal-title" class="modal-title"></h2>
+    <p id="modal-description" class="modal-description"></p>
+    <div class="profile-info">
+      <div class="info-row">
+        <span class="label">Bilgi Sınırı</span>
+        <span class="value"></span>
+      </div>
+      <div class="info-row">
+        <span class="label">Konuşma Tarzı</span>
+        <span class="value italic"></span>
+      </div>
+    </div>
+    <hr class="divider" />
+    <button class="start-btn" >
+      Start Conversation
+    </button>
+  </div>
+</div>
